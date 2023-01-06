@@ -1,0 +1,10 @@
+major_id,major_name,dept_id
+M101,Computer Science,D101
+M102,Computer Application,D101
+M103,Machine Learning,D102
+M104,Data Science,D102
+M105,Arts,D103
+M106,Computational Chemistry,D104
+M107,Mathematical Analytics,D104
+M108,Bioinformatics,D105
+M109,Drug research,D105

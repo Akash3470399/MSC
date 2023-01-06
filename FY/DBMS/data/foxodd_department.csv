@@ -1,0 +1,6 @@
+dept_id,dept_name,dept_location,school_id,chair_id
+D101,Computer Science,Pune,SC103,F101
+D102,Data Science,Pune,SC103,F103
+D103,Arts,Shivajinagar,SC102,F105
+D104,Scientific Computing,FC road,SC101,F107
+D105,Biotechnology,Thane,SC101,F109

@@ -1,0 +1,31 @@
+Course_ID,Course_Name,Credits,Dept_ID
+CP101,Classical Physics,4,D101
+MP101,Modern Physics,6,D101
+CC101,Classical Chemistry,4,D102
+MC101,Modern Chemistry,6,D102
+SA101,Spanish A to Z,4,D103
+CS102,Systems ,4,D104
+CS302,Distributed Systems,5,D104
+BB101,Buisness Analytics,4,D105
+MB101,Marketing,4,D106
+MB102,Finance,6,D106
+B111,Cell Biology,4,D107
+B112,Biostatics,4,D107
+B211,proteomics,4,D108
+B212,Biosystematics,4,D109
+B311,DNA Technology,6,D110
+B312,Immunology,4,D110
+CS105,Computational Mathematics,4,D111
+M101,Algebra-1,4,D111
+M102,Real Analysis,4,D111
+M201,Algebra-2,4,D111
+M202,complex Analysis,4,D111
+M301,discrete mathematics,6,D111
+M302,numerical Analysis,6,D111
+CS101,Programming,4,D112
+CS103,DBMS,4,D112
+CS201,DSA,4,D112
+CS202,Operating System,4,D112
+CS203,Advanced DBMS,4,D112
+CS301,Analysis of Algorithms,5,D112
+CS303,Data Modelling,5,D112
