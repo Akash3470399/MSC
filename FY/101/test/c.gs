@@ -1,0 +1,1 @@
+first.(x :: xs) = x

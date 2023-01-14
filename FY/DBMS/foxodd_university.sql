@@ -57,6 +57,7 @@ create table major(
 create table student(
 	stud_id int primary key,
 	stud_name varchar(100) not null,
+	dob date,
 	total_credits int not null,
 	dept_id varchar(50),
 	advisor_id varchar(50),

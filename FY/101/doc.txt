@@ -1,0 +1,6 @@
+:a to load new files
+:p abc.gs to load files provided in abc.gs 
+ abc.gs  => 
+	    a.gs
+            b.gs
+            c.gs

@@ -1,0 +1,25 @@
+tmux : to create new session
+
+To create named session
+tmux new -s session_name
+
+prefix = ctrl + B
+
+To detach session
+prefix + d
+
+To attach a session 
+tmux attach -t session_name
+
+To list all running sessions
+tmux ls
+
+Killing the session
+tmux kill-session -t session_name
+
+to kill the kill panes
+prefix + x / ctrl + d
+
+to switch between the session
+Prefix + s
+
