@@ -49,9 +49,29 @@ select faculty_name, c.course_name from (
 as temp2 join course c on temp2.course_id = c.course_id;
 
 -- l.	Give the name of the youngest student for course CS101
-select 
+select * from student where dob = (select max(dob) from student);
 
+-- m.	Give the name, id and Date of birth of oldest student
+select * from student where dob = (select min(dob) from student);
 
+-- n.	Give the name, id and Date of birth of students who are not among the oldest students
+select * from student where dob not in (select min(dob) from student);
+
+-- o.	Give the name, id of students who have registered for atleast one section of a course, which has been registered by Amit.
+select stud_name, stud_id from student where stud_id in(select student_id from enrol where (course_id, section_id) in (select course_id, section_id from enrol where student_id = (select stud_id from student where stud_name="amit")));
+
+-- p.	Get the student id, name of the oldest student from computer science department
+select * from student s where dept_id = (select dept_id from department where dept_name="computer science");
+
+-- q.	Get the name and id of the faculties who are department chairs.
+ select * from faculty where faculty_id in (select chair_id from department);
+
+-- r.	Get the three highest enrolled courses/sections
+select course_id, section_id, count(course_id) as ccount from enrol group by course_id, section_id order by ccount desc limit
+3;
+
+-- s.	Get the name of the courses which do not have any pre-requisites.
+select * from course where course_id not in (select course_id from prerequisite);
 
 
 

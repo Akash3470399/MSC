@@ -1,3 +1,15 @@
+
+
+doc = foldr.(\e -> (e ++ "\n")).[
+    "intToChar: Int -> Char",
+    "charToInt : Char -> Int",
+    "stoi: [Char] -> Int",
+    "itos : Int -> [Char]",
+    "getStrNum : [Char] -> Int",
+    "getStrNumHelper: [Char] -> [Char]",
+    "remStrNum: [Char] -> [Char] "
+]
+
 intToChar: Int -> Char
 intToChar.n = chr.(n + 48)
 
