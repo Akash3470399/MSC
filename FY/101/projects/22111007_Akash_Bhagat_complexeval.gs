@@ -1,4 +1,33 @@
 
+charToInt : Char -> Int
+charToInt.ch = ord.ch - 48
+
+isNum : [Char] -> Bool
+isNum.(x ::xs) = isDigit.x
+
+
+-- convert number string to integer stoi."102" -> 102
+stoi: [Char] -> Int
+stoi.[] = 0
+stoi.(x :: xs ) = (charToInt.x) * (10 ^  length.xs) + stoi.xs 
+
+
+
+-- get starting number from expression     e.g. getNum"23+7/4" -> 23
+getNum : [Char] -> Int
+getNum.(x :: xs) = stoi.((getNumHelper.(x :: xs)))
+
+getNumHelper: [Char] -> [Char]
+getNumHelper.[] = []
+getNumHelper.(x :: xs) = if isDigit.x then x:: getNumHelper.xs  else []
+
+-- remove srarting number from expression e.g. rmNum."23+7/4" -> "+7/4"
+rmNum: [Char] -> [Char] 
+rmNum.[] = []
+rmNum.(x :: xs) = if isDigit.x then  rmNum.xs else (x :: xs)
+
+-------------------------------------------------------------- MAIN CODE -----------------------------------------------------------
+
 ctype Op where
 	Plus, Minus, Mul, Div, Pwr , Mod, Er: Op 
 
@@ -36,6 +65,7 @@ prsHlp.[].e = e
 prsHlp.(x::xs).e = if isNum.(x::xs) then prsHlp.(rmNum.(x::xs)).(Num.(getNum.(x::xs))) 
 	     else if x == '+' then Expr.(e).Plus.(prsHlp.xs.(Num.0))
 	     else if x == '-' then Expr.(e).Minus.(prsHlp.xs.(Num.0)) 
+	    --  else if x == '-' then prsHlp.(rmOpr2.xs.0).(Expr.e.Minus.(getOpr2.(xs)))
 	     else if x == '*' then prsHlp.(rmOpr2.xs.0).(Expr.e.Mul.(getOpr2.(xs)))
 	     else if x == '/' then prsHlp.(rmOpr2.xs.0).(Expr.e.Div.(getOpr2.(xs)))
 		 else if x == '^' then prsHlp.(rmOpr2.xs.0).(Expr.e.Pwr.(getOpr2.(xs)))
