@@ -1,0 +1,23 @@
+Assignment 3 (create one single file called rollnumber_name_circle.gs)
+------------
+Given a Circle of people (as explained in class) , do write 7 functions 
+
+
+Create 7 functions as follows
+
+
+-- Q1. Given a circle, find number of people in the circle (function name has to be count_circle)
+
+-- Q2. Given a circle, give the name of all the people in that circle (function name has to be people_circle)
+
+-- Q3. Give a circle and id of the person, remove that person from circle and return the new circle (function name has to be remove_circle)
+
+-- Q4. Given 2 circles (c1 and c2) How the Network c1 will change if both the key people of c1 and c2 gets married (function name has to be new_network_circle) 
+
+-- Q5. You want to go to a picnic and have decided to take only those who are between an age range like 15-45 yrs. Assume that 3 inputs are given which are circle, min age and max age to function .. Create a list of all names who can go to the picnic (function name has to be picnic_circle)
+
+-- Q6. Given two circles, Find all the common people in that circle (function name has to be common_circle)
+
+-- Q7. Given two circles and agegap in Int - find all the potential couples who can get married and their age difference is within the age gap (function name has to be match_couples_circle)
+
+Note that I have already defined the CTYPE in class and I am sending the CTYPE and sample data in a separate file

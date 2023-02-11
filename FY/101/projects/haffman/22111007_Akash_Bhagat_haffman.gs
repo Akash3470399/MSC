@@ -85,6 +85,7 @@ chuncks.[] = []
 chuncks.(c :: cs) = if length.c == 7 then chr.(btod.c) :: chuncks.cs
                     else [chr.(btod.(append0.(c).(7-length.c))), chr.(48 + (7 - length.c))] 
 
+-- encode the tree into string
 encodeTree : [(Char, [Char])] -> [Char]
 encodeTree.[] = []
 encodeTree.((c, f) :: ns) = (f++[c]) ++ encodeTree.ns
@@ -119,9 +120,10 @@ push0.str.n = push0.('0' :: str).(n-1)
 
 -- create list of Bit stream form char of compressed msg 
 hStream.[] = []
-hStream.[x, y] = if length.(dtob.(ord.x)) == 7 then  [take.(ord.y -48).(dtob.(ord.x))]
-			 else [take.(ord.y - 48).(push0.(dtob.(ord.x)).(7-length.(dtob.(ord.x))))]
-hStream.(c :: cs) =  dtob.(ord.c) :: hStream.cs
+hStream.[x, y] = if length.(dtob.(ord.x)) == 7 then  [take.(ord.y -41).(dtob.(ord.x))]
+			 else [take.(ord.y - 41).(push0.(dtob.(ord.x)).(7-length.(dtob.(ord.x))))]
+hStream.(c :: cs) =  if length.(dtob.(ord.c)) < 7 then push0.(dtob.(ord.c)).(7-length.(dtob.(ord.c))) :: hStream.cs
+	             else dtob.(ord.c) :: hStream.cs
 
 -- create a single bits stram form list of bit stram
 -- joinStream.bsl = foldr.((++)).[].bsl

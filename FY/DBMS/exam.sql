@@ -1,0 +1,4 @@
+use exam;
+
+
+create table 
